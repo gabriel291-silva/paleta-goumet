@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import icon from './assets/3dgifmaker76547.gif'
 interface Produto {
