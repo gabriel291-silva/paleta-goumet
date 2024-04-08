@@ -128,7 +128,7 @@ function App(): JSX.Element {
               <p>
                 <b>Confeito:</b> {item.confeito}
               </p>
-              <button onClick={() => removerDaSacola(index)}>Remover</button>
+              <button className="remove-item-button" onClick={() => removerDaSacola(index)}>Remover</button>
             </div>
           ))}
           <button className="enviar-button" onClick={enviarPedidoWhatsapp}>

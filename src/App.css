@@ -107,6 +107,9 @@ body {
   width: 100%
   ;
 }
+.remove-item-button{
+  color: #000;
+}
 .minicart-qtn{
   position: relative;
     background: green;
