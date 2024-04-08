@@ -75,7 +75,7 @@ function App(): JSX.Element {
         )
         .join("%0A");
     const url = `https://wa.me/5511987361695?text=${mensagem}`;
-    window.open(url, "_blank");
+    window.open(url);
     // Limpar a sacola após enviar o pedido
     setSacola([]);
   };
