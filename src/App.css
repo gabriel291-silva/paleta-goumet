@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.selecoes {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  padding: 16px 0;
+}
+
+.opcoes {
+  width: 100%;
+}
+.opcoes-list-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.botao {
+  background-color: #ffffff;
+  border: 1px solid #c1c1c1;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #f1f1f1;
+}
+
+.botao-selecionado {
+  background-color: #4fa371;
+  color: #ffffff;
+  border: 1px solid #4fa371;
+}
+
+.botao-selecionado:hover {
+  background-color: #4fa371;
+  color: #ffffff;
+}
+body {
+  color: black; /* Define a cor do texto para preto */
+  background-color: white; /* Define a cor de fundo para branco */
+}
+
+/* Estilos para os botões de seleção */
+.botao {
+  color: black; /* Define a cor do texto para preto */
+  background-color: white; /* Define a cor de fundo para branco */
+}
+
+.botao-selecionado {
+  color: white; /* Define a cor do texto para branco */
+  background-color: black; /* Define a cor de fundo para preto */
+}
+
+/* Estilos para o botão "Adicionar à Sacola" */
+.botao-adicionar {
+  color: white; /* Define a cor do texto para branco */
+  background-color: black; /* Define a cor de fundo para preto */
+  margin: 20px;
+}
+
+/* Estilos para o resumo da sacola */
+.minicart {
+  color: black;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+.button-minicart-icon{
+  width: 30px;
+  
+}
+.minicart-container{
+  position: absolute;
+  top: 18px;
+  right: 0px;
+}
+.header-minicart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 21px;
+}
+.minicart-container{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 16px;
+}
+.enviar-button{
+  margin-top: 40px;
+    background: black;
+    color: #fff;
+}
+.icon-paleta{
+  width: 100%
+  ;
+}
+.minicart-qtn{
+  position: relative;
+    background: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    right: -15px;
+    top: -14px;
+}
