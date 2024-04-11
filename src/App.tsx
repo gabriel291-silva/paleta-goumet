@@ -8,10 +8,27 @@ interface Produto {
   confeito: string;
 }
 
-const sabores: string[] = ["Chocolate", "Morango", "Baunilha"];
-const coberturas: string[] = ["Chocolate", "Morango", "Caramelo"];
-const tiposCasquinha: string[] = ["Casquinha", "Marshmallow"];
-const confeitos: string[] = ["Granulado", "Chantilly", "Frutas"];
+const sabores: string[] = [
+"Recheadas: Ninhotella" ,
+"Recheadas: Choconinho ",
+"Recheadas: Chocotella",
+"Recheadas: Ovomaltine c Nutella ",
+"Recheadas: Rafaello",
+"Recheadas: Morangotella",
+"Recheadas: Morango ninho",
+"Recheadas: Morango C leite cond ",
+"Recheadas: Maracujá c l.cond ",
+
+"Ao Leite: Chocobelga",
+"Ao Leite:Mousse de morango",
+"Ao Leite:Coco branco",
+
+"Fruta  (zero lactose ): Manga",
+"Fruta  (zero lactose ): Morango" 
+];
+const coberturas: string[] = ["Ao leite", "Meio amargo", "Branco"];
+const tiposCasquinha: string[] = ["Casquinha", "Marshmallow","Duo"];
+const confeitos: string[] = ["Amendoim ", "Ovomaltine ", "Cookie"];
 
 function App(): JSX.Element {
   const [produto, setProduto] = useState<Produto>({
@@ -67,7 +84,7 @@ function App(): JSX.Element {
 
   const enviarPedidoWhatsapp = (): void => {
     const mensagem =
-      "Olá! Gostaria de encomendar os seguintes produtos:%0A%0A" +
+      "Olá! Gostaria de pedir as seguintes paletas gourmet:%0A%0A" +
       sacola
         .map(
           (item) =>
@@ -160,7 +177,23 @@ function App(): JSX.Element {
             </div>
           </div>
           <div className="opcoes">
-            <h2>Cobertura</h2>
+            <h2>Tipo</h2>
+            <div className="opcoes-list-content">
+              {tiposCasquinha.map((tipo: string, index: number) => (
+                <button
+                  key={index}
+                  className={
+                    produto.tipo === tipo ? "botao-selecionado" : "botao"
+                  }
+                  onClick={() => selecionarTipo(tipo)}
+                >
+                  {tipo}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="opcoes">
+            <h2>Chocolcate</h2>
             <div className="opcoes-list-content">
               {coberturas.map((cobertura: string, index: number) => (
                 <button
@@ -173,22 +206,6 @@ function App(): JSX.Element {
                   onClick={() => selecionarCobertura(cobertura)}
                 >
                   {cobertura}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="opcoes">
-            <h2>Tipo</h2>
-            <div className="opcoes-list-content">
-              {tiposCasquinha.map((tipo: string, index: number) => (
-                <button
-                  key={index}
-                  className={
-                    produto.tipo === tipo ? "botao-selecionado" : "botao"
-                  }
-                  onClick={() => selecionarTipo(tipo)}
-                >
-                  {tipo}
                 </button>
               ))}
             </div>
